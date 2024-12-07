@@ -1,0 +1,226 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form input, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #00408f;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #0056b3;
+    padding: 15px 0;
+    color: #fff;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #cce0ff;
+}
+
+/* Buttons */
+button {
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0056b3;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00408f;
+}
+
+/* Home Page Styles */
+.home-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.home-container button {
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
+    background-color: #d9534f;
+}
+
+.home-container button:hover {
+    background-color: #c9302c;
+}
+
+/* Dashboard Table */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #0056b3;
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.action-buttons button.accept {
+    background-color: #5cb85c;
+}
+
+.action-buttons button.accept:hover {
+    background-color: #449d44;
+}
+
+.action-buttons button.ignore {
+    background-color: #d9534f;
+}
+
+.action-buttons button.ignore:hover {
+    background-color: #c9302c;
+}
+
+/* Forgot Password Page */
+.forgot-password-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.forgot-password-container input {
+    margin-bottom: 15px;
+}
+
+/* Links */
+.links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.links a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form, .forgot-password-container {
+        width: 90%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .home-container button {
+        width: 150px;
+        height: 50px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .home-container button {
+        width: 130px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .links a {
+        font-size: 14px;
+    }
+}

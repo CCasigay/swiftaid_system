@@ -1,0 +1,274 @@
+/* General Styles */
+body {
+    font-family: 'Merriweather', serif; /* Elegant and demure font */
+    background: linear-gradient(to right, #f7b2b7, #f7e2b2);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Headings */
+h2 {
+    font-family: 'Merriweather', serif;
+    color: #d9534f;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+h5 {
+    color: #d9534f;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* Navigation Bar */
+nav.navbar {
+    background-color: #d9534f;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #ff5a5f;
+}
+
+nav.navbar .navbar-brand {
+    font-size: 26px;
+    font-weight: 800;
+    color: whitesmoke;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav.navbar .navbar-nav .nav-item {
+    margin-right: 20px;
+}
+
+nav.navbar a {
+    color: whitesmoke;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    padding: 8px 10px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+nav.navbar a:hover {
+    color: #ffc107;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+nav.navbar .nav-item.active .nav-link {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+/* Profile Picture in Navbar */
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+/* Side Panel */
+.offcanvas {
+    background: linear-gradient(135deg, #ff5a5f, #d9534f);
+    color: #fff;
+    font-weight: 600;
+}
+
+.offcanvas-header {
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+}
+
+.offcanvas-body {
+    padding: 20px;
+    background-color: #f7f7f7;
+    color: #333;
+    font-size: 16px;
+}
+
+.offcanvas-body p {
+    margin-bottom: 10px;
+}
+
+.offcanvas-body .c-sign {
+    background-color: #fff;
+    color: #d9534f;
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Notifications */
+.notification {
+    border: 1px solid #d9534f;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.notification h5 {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.notification p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #d9534f; /* Footer background color */
+    color: white; /* White text for footer */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: auto; /* Pushes the footer to the bottom */
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+table.about-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table.about-table td {
+    padding: 25px;
+    vertical-align: top;
+    border-bottom: 1px solid #ddd;
+}
+
+table.about-table td:last-child {
+    border-bottom: none;
+}
+
+table.about-table h5 {
+    font-weight: bold;
+    color: #d9534f;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+table.about-table p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Table Hover Effect */
+table.about-table tr:hover {
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    nav.navbar {
+        padding: 10px 15px;
+    }
+
+    nav.navbar .navbar-brand {
+        font-size: 24px;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .profile-pic {
+        width: 35px;
+        height: 35px;
+    }
+
+    table.about-table td {
+        padding: 15px;
+    }
+
+    table.about-table h5 {
+        font-size: 20px;
+    }
+
+    table.about-table p {
+        font-size: 16px;
+    }
+}
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff; /* White background for the content */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    overflow: hidden; /* Ensures content fits nicely within the container */
+    margin-top: 100px; /* Adjusts spacing from the top of the page */
+}
+
+/* Inner content within the container */
+.container .content {
+    padding: 20px;
+    color: #333; /* Dark text for readability */
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Add some subtle styling for header within container */
+.container h2 {
+    font-size: 40px;
+    color: #d9534f;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* Responsive container */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin-top: 70px; /* Adjusts the container's top margin on small screens */
+    }
+
+    .container h2 {
+        font-size: 28px;
+    }
+
+    .container .content {
+        font-size: 14px;
+    }
+}

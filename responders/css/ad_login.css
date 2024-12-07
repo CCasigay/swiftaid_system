@@ -1,0 +1,149 @@
+/* General Body and Background */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, rgba(106, 27, 154, 0.8), rgba(0, 0, 0, 0.7)); /* Gradient from violet to radiant black */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent scrollbars on body */
+}
+
+/* Container for the form */
+.login-container {
+    background-color: white; /* White background for the form */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 100%;
+    max-width: 500px;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+/* Logo Styling */
+.logo-container {
+    text-align: center; /* Center the logo */
+    margin-bottom: 20px; /* Space between logo and heading */
+}
+
+.logo {
+    width: 120px; /* Set the logo to a smaller size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Heading Style */
+h2 {
+    font-size: 28px;
+    color: #333; /* Dark gray for heading text */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Form Grouping */
+.form-group {
+    margin-bottom: 20px; /* Spacing between form groups */
+}
+
+label {
+    font-weight: bold;
+    color: #333; /* Radiant Black */
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd; /* Light border for input fields */
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #fafafa; /* Light dirty white background for inputs */
+}
+
+/* Input Focus Effect */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #6a1b9a; /* Violet color for focus effect */
+    outline: none;
+    box-shadow: 0 0 5px rgba(106, 27, 154, 0.3); /* Violet glow on focus */
+}
+
+/* Button Style */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #6a1b9a; /* Radiant Violet */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #4a148c; /* Darker shade of violet for hover */
+}
+
+/* Link Style */
+p a {
+    color: #6a1b9a; /* Violet color for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Scrollable Form */
+.login-container {
+    overflow-y: auto;
+    max-height: 80vh; /* Limit height for scrolling */
+    padding: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px;
+        width: 90%; /* Form width adjustment for smaller screens */
+    }
+
+    h2 {
+        font-size: 24px; /* Smaller font size on mobile */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select {
+        font-size: 14px; /* Smaller font size for inputs */
+    }
+
+    button[type="submit"] {
+        font-size: 14px; /* Smaller button text on mobile */
+    }
+}

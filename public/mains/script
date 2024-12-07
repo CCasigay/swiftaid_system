@@ -1,0 +1,103 @@
+<script>
+    let userLatitude, userLongitude;
+
+    function showNotification(message, success = true) {
+        const notificationBar = document.getElementById("notificationBar");
+
+        if (!notificationBar) {
+            console.error("Notification bar element not found!");
+            return;
+        }
+
+        notificationBar.style.backgroundColor = success ? "#28a745" : "#dc3545";
+        notificationBar.style.color = "white";
+        notificationBar.textContent = message;
+        notificationBar.style.display = "block";
+        notificationBar.style.position = "fixed";
+        notificationBar.style.top = "0";
+        notificationBar.style.width = "100%";
+        notificationBar.style.zIndex = "1050";
+
+        setTimeout(() => {
+            notificationBar.style.display = "none";
+        }, 3000);
+    }
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    userLatitude = position.coords.latitude;
+                    userLongitude = position.coords.longitude;
+                    const severityModal = new bootstrap.Modal(document.getElementById("severityModal"));
+                    severityModal.show();
+                },
+                (error) => showNotification("Error getting location: " + error.message, false)
+            );
+        } else {
+            showNotification("Geolocation is not supported by this browser.", false);
+        }
+    }
+
+    function submitSeverity(severity) {
+        const userId = <?php echo json_encode($_SESSION['user_id']); ?>;
+
+        fetch("../includes/sendHelp.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams({
+                userId: userId,
+                latitude: userLatitude,
+                longitude: userLongitude,
+                severity: severity,
+            }),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.success) {
+                    showNotification("Help request submitted successfully, help is on the way!");
+                } else {
+                    showNotification("Failed to submit help request: " + data.message, false);
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                showNotification("An error occurred while sending the request.", false);
+            });
+    }
+
+    document.querySelector("#sendHelpBtn").addEventListener("click", getLocation);
+
+    function fetchNotifications() {
+        fetch("../includes/fetchNotifications.php")
+            .then((response) => response.json())
+            .then((data) => {
+                const notificationLink = document.querySelector("a[href='../mains/notification.php']");
+                if (data.unread_count > 0) {
+                    // Update the notification badge dynamically
+                    let badge = notificationLink.querySelector(".notification-badge");
+                    if (!badge) {
+                        badge = document.createElement("span");
+                        badge.className = "notification-badge";
+                        notificationLink.appendChild(badge);
+                    }
+                    badge.textContent = data.unread_count;
+                } else {
+                    // Remove the badge if no unread notifications
+                    const badge = notificationLink.querySelector(".notification-badge");
+                    if (badge) {
+                        badge.remove();
+                    }
+                }
+            })
+            .catch((error) => console.error("Error fetching notifications:", error));
+    }
+
+    // Call fetchNotifications every 30 seconds
+    setInterval(fetchNotifications, 30000); // Adjust the interval to 30 seconds
+
+    document.getElementById('profilePic').addEventListener('click', () => {
+        const userDetailsPanel = new bootstrap.Offcanvas(document.getElementById('userDetailsPanel'));
+        userDetailsPanel.show();
+    });
+</script>

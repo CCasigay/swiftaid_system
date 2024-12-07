@@ -1,0 +1,379 @@
+/* General Body Styling */
+body {
+    font-family: 'Merriweather', serif; /* Elegant and demure font */
+    background: linear-gradient(to right, #f7b2b7, #f7e2b2);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main Container Styling */
+.container {
+    max-width: 600px;
+    background: white;
+    margin: 140px auto 30px;
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    border: 4px solid transparent;
+    animation: glow-border 2s infinite alternate;
+}
+
+/* Heading Styling */
+h2 {
+    font-family: 'Merriweather', serif; /* Same demure font */
+    color: #d9534f;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+/* Help Text Styling */
+.help-text {
+    font-family: 'Merriweather', serif; /* Same demure font */
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Emergency Button Styling (Pumping Effect Only) */
+.send-help-btn {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff0000, #990000); /* Dark red gradient */
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid #ff0000;  /* Red border */
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    animation: pulse 2s infinite; /* Only the pulse animation (no spin) */
+}
+
+.send-help-btn:hover {
+    background: linear-gradient(135deg, #990000, #660000);
+    transform: scale(1.1);
+}
+
+/* Pulse animation for the circle (pumping effect) */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px #D72638, 0 0 20px #D72638, 0 0 30px #D72638;
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px #D72638, 0 0 40px #D72638, 0 0 60px #D72638;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+    }
+}
+
+/* Navigation Bar Styling */
+nav.navbar {
+    background-color: #d9534f;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav.navbar .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: whitesmoke; /* White text for brand */
+    text-transform: uppercase;
+}
+
+nav.navbar a {
+    color: whitesmoke; /* Light color for contrast */
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav.navbar a:hover {
+    color: #ffc107; /* Subtle yellow hover effect */
+    text-decoration: none;
+}
+
+nav.navbar .nav-item.active .nav-link {
+    color: #ffc107; /* Highlight active link */
+    font-weight: bold;
+}
+
+/* Dropdown Menu */
+nav.navbar .dropdown-menu {
+    background-color: #f8f9fa; /* Light background for dropdown */
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+nav.navbar .dropdown-item {
+    color: #343a40; /* Darker color for readability */
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav.navbar .dropdown-item:hover {
+    background-color: #ffc107;
+    color: #ffffff; /* White text on hover */
+}
+
+/* Notification Badge Positioning */
+.notification-badge {
+    background-color: #ff4d4f; /* Bright red for notifications */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    display: inline-block;
+}
+
+/* Navbar Toggler (Mobile View) */
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255,255,255,0.7)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Main Container with Glowing Border */
+.container {
+    max-width: 600px;
+    background: white;
+    margin: 140px auto 30px;
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    border: 4px solid transparent; /* Initial transparent border */
+    animation: glow-border 2s infinite alternate; /* Glowing border animation */
+}
+
+/* Glowing Border Animation */
+@keyframes glow-border {
+    0% {
+        border-color: #ff0000; /* Red at start */
+        box-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000, 0 0 45px #ff0000;
+    }
+    50% {
+        border-color: #dd5c1b; /* Orange midway */
+        box-shadow: 0 0 25px #dd5c1b, 0 0 50px #dd5c1b, 0 0 75px #dd5c1b;
+    }
+    100% {
+        border-color: #ff0000; /* Yellow at end */
+        box-shadow: 0 0 35px #ff0000, 0 0 70px #ff0000, 0 0 100px #ff0000;
+    }
+}
+
+
+h2 {
+    color: #d9534f;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.help-text {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.help-text span {
+    color: #d9534f;
+    font-weight: 600;
+}
+
+/* Notification Bar Styling */
+#notificationBar {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745; /* Green for success */
+    color: white;
+    padding: 15px 30px;
+    font-weight: 600;
+    border-radius: 6px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+    font-size: 16px;
+}
+
+#notificationBar.error {
+    background-color: #dc3545; /* Red for error */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #d9534f;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: auto;
+}
+
+/* Modal Styling */
+.modal-body .severity-btn {
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-body .severity-btn:hover {
+    transform: scale(1.02);
+}
+
+.modal-body .btn-danger {
+    background-color: #d9534f;
+    color: white;
+}
+
+.modal-body .btn-warning {
+    background-color: #ffc107;
+    color: black;
+}
+
+.modal-body .btn-primary {
+    background-color: #5bc0de;
+    color: white;
+}
+
+.modal-body .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav.navbar .navbar-brand {
+        font-size: 20px;
+    }
+
+    .container {
+        margin-top: 100px;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .send-help-btn {
+        width: 150px;
+        height: 150px;
+        font-size: 18px;
+    }
+
+    #notificationBar {
+        width: 90%;
+    }
+}
+
+/* Sidebar Styles */
+.user-sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Initially hidden */
+    width: 300px;
+    height: 100%;
+    background-color: #f8f9fa;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    z-index: 1050;
+    transition: right 0.3s ease;
+}
+
+.user-sidebar.active {
+    right: 0; /* Slide in when active */
+}
+
+.user-sidebar .sidebar-header {
+    padding: 15px;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.user-sidebar .sidebar-content {
+    padding: 15px;
+}
+
+/* Profile Picture in Navbar */
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Close Button */
+.close-sidebar {
+    float: right;
+    color: white;
+    cursor: pointer;
+}
+
+.close-sidebar:hover {
+    color: #dc3545;
+}

@@ -1,0 +1,201 @@
+body {
+    font-family: 'Merriweather', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: linear-gradient(90deg, #007BFF, #00C6FF);
+    padding: 1rem; /* Ensure there's spacing around the navbar */
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: color 0.3s, background-color 0.3s, border-radius 0.3s;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffc107;
+}
+
+.nav-link.active {
+    color: #ffc107;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2px;
+    background-color: #ffc107;
+    border-radius: 10px;
+}
+
+/* Profile Image Styling */
+.navbar .mobile-profile .nav-item img.profile-pic {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    cursor: pointer; /* Make the profile image clickable */
+}
+/* Offcanvas Panel Styling */
+.offcanvas-body {
+    font-size: 1rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+}
+
+.c-sign {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+/* Additional mobile adjustments */
+@media (max-width: 767px) {
+    .navbar .mobile-profile {
+        display: block; /* Ensure profile icon is always visible */
+    }
+}
+
+/* Ensure the body takes up the full height */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content will grow to take up available space */
+main {
+    flex-grow: 1;
+}
+
+/* Footer stays at the bottom */
+footer {
+    background: linear-gradient(90deg, #007BFF, #00C6FF);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+.logo-img {
+    border: 2px solid white;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Notification Styles */
+.report-item {
+    background: #f8f9fa;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.critical {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.emergent {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.action-container {
+    margin-top: 1rem;
+}
+
+.accept-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.accept-btn:hover {
+    background-color: #0056b3;
+}
+
+.notification-header {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Table heading style */
+#reports h2 {
+    margin-top: 2rem;
+    color: #007BFF;
+}
+
+.container-custom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.copy-btn {
+    background-color: #4CAF50;
+    /* Green */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.copy-btn:hover {
+    background-color: #45a049;
+}
+
+
+/* Offcanvas Panel Styling */
+.offcanvas-body {
+    font-size: 1rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+}
+
+.c-sign {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+/* Additional mobile adjustments */
+@media (max-width: 767px) {
+    .navbar .mobile-profile {
+        display: block; /* Ensure profile icon is always visible */
+    }
+}

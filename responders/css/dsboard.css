@@ -1,0 +1,190 @@
+/* General Body Styling */
+body {
+    font-family: 'Merriweather', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: linear-gradient(90deg, #007BFF, #00C6FF);
+    padding: 1rem; /* Ensure there's spacing around the navbar */
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: color 0.3s, background-color 0.3s, border-radius 0.3s;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffc107;
+}
+
+.nav-link.active {
+    color: #ffc107;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2px;
+    background-color: #ffc107;
+    border-radius: 10px;
+}
+
+/* Profile Image Styling */
+.navbar .mobile-profile .nav-item img.profile-pic {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    cursor: pointer; /* Make the profile image clickable */
+}
+
+/* Offcanvas Panel Styling */
+.offcanvas-body {
+    font-size: 1rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+}
+
+.c-sign {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+/* Additional mobile adjustments */
+@media (max-width: 767px) {
+    .navbar .mobile-profile {
+        display: block; /* Ensure profile icon is always visible */
+    }
+}
+
+
+
+/* Graph Container Styling */
+.graph-container {
+    background: #fff;
+    padding: 1.5rem;
+    transform: translateX(10%);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Image Styling */
+.logo-img {
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.dropdown-item {
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: #f4f4f4; /* Light gray background on hover */
+    color: #007bff; /* Blue text on hover */
+}
+
+.dropdown-item i {
+    font-size: 1.2rem; /* Slightly larger icons for better visibility */
+}
+
+
+.container {
+    max-width: 100%;
+    padding: 20px;
+}
+
+.stat-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.stat-card p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Graph Container Styling */
+.graph-container {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Center align */
+    max-width: 100%;
+    width: 100%; /* Ensure it fills available space */
+    transform: none; /* Remove unnecessary translation */
+    text-align: center; /* Center-align text inside */
+}
+
+/* Responsive Graph Adjustments */
+@media (max-width: 768px) {
+    .graph-container {
+        margin-top: 20px;
+        padding: 1rem; /* Reduce padding on smaller screens */
+    }
+}
+
+.graph-container canvas {
+    max-width: 100%;
+    height: auto; /* Ensure it resizes dynamically */
+}
+
+@media (max-width: 768px) {
+    .stat-card {
+        text-align: center;
+    }
+    .graph-container {
+        margin-top: 20px;
+    }
+}
+.stat-card button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.stat-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+    background: linear-gradient(90deg, #007BFF, #00C6FF);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
